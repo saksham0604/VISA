@@ -1,0 +1,1 @@
+:root.brand{--primary-dark-color: var(--brand-primary-dark-color, #021e4c);--link-focus-color: var(--brand-primary-dark-color);--link-color: var(--brand-primary-color, #1434cb)}:root.brand .vs-sct,:root.brand .vs-ect{--link-color: var(--tertiary-7-color, #2c2c2c)}:root.brand .vs-story-telling .vs-header-cta{--link-color: var(--tertiary-7-color, #2c2c2c);--link-focus-color: black}

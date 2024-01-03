@@ -1,0 +1,76 @@
+let config=`{       
+    "clickElements":[".vs-btn",".btn-xs",".vs-link-cta",".vs-link-cta-ga4",".link-cta",".new-window-link",".modal__show",".slide-cta-button",".vs-share-anchor",".vs-nav-logo",".vs-ct-image",".vs-social-anchor",".vs-sct",".vs-d-inline",".visa-icon-close",".vs-video-play-button",".vs-share-modal-btn",".overflower-item selected"],
+    "shadowRootRef":[],
+    "hoverElements":[],
+    "selectElements":[],
+    "eventObject":{
+        "clickText":"this.textContent.trim()",
+            "clickUrl":"this.attributes.href?.value ? this.attributes.href?.value : (this.firstChild?.attributes?.href?.value ? this.firstChild?.attributes?.href?.value : this.parentElement?.attributes?.href?.value)",
+        "eventAction":"getClickTrack(this)",
+        "componentType":{
+            "selectors":{
+                "'Header'":"$(this).closest('header')",
+                "'Footer'":"$(this).closest('footer')",
+                "'button'":"$(this).closest('.vs-btn').length > 0 ? $(this).closest('.vs-btn') : $(this).closest('.vs-video-play-button')",
+                "'Offers'":"$(this).closest('vs-offers')",
+                "'Rich text'":"$(this).closest('.rich-text-content')",
+                "'Model'":"$(this).closest('.vs-modal-parent')",
+               	"'Image'":"$(this).closest('.vs-sct')",
+                "'text'":"$(this).closest('body')"
+            }
+        },
+            "siteSection":"window.location.pathname === '/' ? 'home' :'others'",
+        "imageLabel":"$(this).find('img').length > 0 ? $(this).find('img')[0].getAttribute('alt'): 'NAA'",
+        "component":{
+            "selectors":{
+                "'HeroMarquee'":"$(this).closest('.heromarquee-item')",
+                "'Container Submarquee'":"$(this).closest('.container-submarquee')",
+                "'TileContainer'":"$(this).closest('.tile-container')",
+                "'Container Interrupter'":"$(this).closest('.ContainerInterrupter')",
+                "'Accordian'":"$(this).closest('.containerAccordion').length > 0 ? $(this).closest('.containerAccordion') : ($(this).closest('.containerAccordionNew').length > 0 ? $(this).closest('.containerAccordionNew') :$(this).closest('.drawercomponent'))",
+                "'Card Stack'":"$(this).closest('.cardStack')",
+                "'brand blade'":"$(this).closest('.brand-blade-container')",
+                "'Marquee Slide'":"$(this).closest('.visa-marquee-slide')",
+                "'Content card'":"$(this).closest('.contentCard-Medium')",
+                "'Content Bundle'":"$(this).closest('vs-content-bundle')",
+                "'Marquee'":"$(this).closest('vs-marquee')",
+                "'Anchor nav'":"$(this).closest('.navanchor .vs-anchor-base')",
+                "'Secondary navigation'":"$(this).closest('.vs-ribbon-nav .vs-ribbon-nav-list')",
+                "'Nav audience'":"$(this).closest('.visa-horizontal-nav-audience')",
+                "'Navigation'":"$(this).closest('nav')",
+                "'Quotes'":"$(this).closest('.vs-quote-section')",
+                "'Related link'":"$(this).closest('.vs-related-links')",
+                "'Social Share'":"$(this).closest('vs-social-share-container')",
+                "'rich text editor'":"$(this).closest('.rich-text-content') || $(this).closest('.vs-link-submenu')",
+                "'Offers+Perks'":"$(this).closest('vs-global-offers')",
+                "'ExchangeRateCalculator'": "$(this).closest('.vs-calculator')",
+                "'Carousal'": "$(this).closest('.vs-carousel-content')",
+                "'Button'":"$(this).closest('.buttonComp')",
+                "'Model Text'":"$(this).closest('.vs-modal-parent')",
+                "$(this).closest('.section')?.classList? $(this).closest('.section')?.classList[0] : ''":"$(this).closest('.section')"
+            }
+        },
+        "clickCategory1":{
+            "selectors":{
+                "$($(this).closest('vs-content-bundle').find('.vs-content-bundle-header')[0]).text()":"$($(this).closest('vs-content-bundle').find('.vs-content-bundle-header')[0]).text()",
+                "$(this.closest('.vs-submenu')).siblings('.vs-mainmenu-item')[0]?.text" : "$(this.closest('.vs-submenu')).siblings('.vs-mainmenu-item')[0]?.text",
+                "$(this.parentNode)?.find('.vs-lead').text().trim()":"$(this.parentNode)?.find('.vs-lead').text().trim()",
+                "$(this.parentElement?.parentNode)?.find('.vs-lead').text().trim()":"$(this.parentElement?.parentNode)?.find('.vs-lead').text().trim()",
+                 "$(this.parentElement?.parentElement?.parentNode)?.find('.vs-lead').text().trim()":"$(this.parentElement?.parentElement?.parentNode)?.find('.vs-lead').text().trim()",
+                 "$(this.parentElement?.parentElement?.parentNode)?.find('.vs-interrupter-title').text().trim()":"$(this.parentElement?.parentElement?.parentNode)?.find('.vs-interrupter-title').text().trim()",
+                     "getClickCategoryModel(this)":"getClickCategoryModel(this)"
+            }
+        },
+        "clickCategory2":{
+            "selectors":{
+             "$($(this).closest('vs-content-bundle').find('.vs-content-bundle-body')[0]).text()":"$($(this).closest('vs-content-bundle').find('.vs-content-bundle-body')[0]).text()",
+                "$(this.parentElement?.parentElement?.parentNode)?.find('.vs-lead-submenu').text().trim()" : "$(this.parentElement?.parentElement?.parentNode)?.find('.vs-lead-submenu').text().trim()"
+            }
+        }
+    }
+    
+}`;let clickElements=JSON.parse(config)?.clickElements;let shadowRoots=JSON.parse(config)?.shadowRootRef;function getClickTrack(element){var clickType='NAA';if($(element).hasClass('vs-accordion-button')){let expanded=$(element).attr('aria-expanded');if(expanded==='true'){clickType='expand';}else{clickType='collapse';}}else if($(element).hasClass('vs-link-open')){clickType='expand';}else if($(element).hasClass('vs-link-close')){clickType='collapse';}else if($(element).hasClass('modal__show')||$(element).hasClass('vs-video-play-button')||$(element).hasClass('vs-share-modal-btn')){clickType='modal open';}else if($(element).hasClass('visa-icon-close')){clickType='modal close';}else if($(element).hasClass('vs-btn')||$(element).hasClass('vs-link-cta')||$(element).hasClass('vs-sct')||$(element).hasClass('vs-share-anchor')||$(element).hasClass('slide-cta-button')||$(element).hasClass('btn-xs')||$(element).hasClass('link-cta')||$(element).hasClass('vs-d-inline')||$(element).hasClass('overflower-item selected')||$(element).hasClass('vs-link-cta-ga4')){clickType='link_click';}
+return clickType;}
+function getClickCategoryModel(element){var clickType='';if($(element).hasClass('visa-icon-close')){var vsmodel=$(element).closest('.vs-modal-parent').find('div[data-gtm-component-title]');var vsmodelVideo=$(element).closest('.vs-modal-container').find('.vs-modal-header');if(vsmodel&&vsmodel.length>0){clickType=$(vsmodel[0]).attr('data-gtm-component-title');}else if(vsmodelVideo&&vsmodelVideo.length>0){clickType=vsmodelVideo.text().trim();}}
+return clickType;}
+clickElements.forEach((elem)=>{$(document).on('click',elem,function(event){let eventObj=JSON.parse(config)?.eventObject;iterate.call(this,eventObj);simplify.call(this,eventObj);let click_event=new CustomEvent('click_tracking',{detail:eventObj});document.dispatchEvent(click_event);});});shadowRoots.forEach((shadowRoot)=>{clickElements.forEach((elem)=>{$(shadowRoot)[0]?.shadowRoot.querySelectorAll(elem).forEach((item)=>{item.addEventListener('click',function(item){let eventObj=JSON.parse(config)?.eventObject;iterate.call(this,eventObj);simplify.call(this,eventObj);let click_event=new CustomEvent('click_tracking',{detail:eventObj,});document.dispatchEvent(click_event);});});});});iterate=function(obj){Object.keys(obj).forEach((key)=>{if(eval(obj[key])?.length<=0){delete obj[key];}else if(typeof obj[key]==='object'&&obj[key]!==null){iterate.call(this,obj[key]);}else{obj[key]=eval(obj[key]);}});};simplify=function(obj){Object.keys(obj).forEach((key)=>{if(obj[key]&&obj[key]['selectors']){let firstKey=Object.keys(obj[key]['selectors'])[0];let objectKeyValue=eval(firstKey);if(objectKeyValue){obj[key]=objectKeyValue;}else if(Object.keys(obj[key]['selectors'])[1]){let secondkey=Object.keys(obj[key]['selectors'])[1];let objectSecondKeyValue=eval(secondkey);if(objectSecondKeyValue){obj[key]=objectSecondKeyValue;}}else{obj[key]='';}}else if(typeof obj[key]==='object'&&obj[key]!==null){simplify(this,obj[key]);}else if(typeof obj[key]==='undefined'||obj[key]==='NAA'){obj[key]='';}});};

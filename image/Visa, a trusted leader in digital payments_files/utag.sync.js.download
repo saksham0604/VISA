@@ -1,0 +1,4 @@
+//tealium universal tag - utag.sync ut4.0.202311150919, Copyright 2023 Tealium.com Inc. All Rights Reserved.
+var hostURL=window.location.hostname;var optimizelyURL;if((hostURL.indexOf("usa.review.visa.com")!=-1)|(hostURL.indexOf("usa.visa.com")!=-1)|(hostURL=="rvcom-uat.visa.com")){window.optimizely=window.optimizely||[];window.optimizely.push({type:"holdEvents"});optimizelyURL="https://cdn.optimizely.com/js/10654255723.js"}
+if((hostURL.indexOf("ca.review.visa.com")!=-1)|(hostURL.indexOf("visa.ca")!=-1)|(hostURL.indexOf("ca.rvcom-uat.visa.com")!=-1)){window.optimizely=window.optimizely||[];window.optimizely.push({type:"holdEvents"});optimizelyURL="https://cdn.optimizely.com/js/20283570581.js"}
+var scr=document.createElement('script');scr.src=optimizelyURL;document.getElementsByTagName('head')[0].appendChild(scr);

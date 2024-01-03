@@ -1,0 +1,60 @@
+@font-face{font-family:'Glyphicons Halflings';font-display:swap;src:url('newFonts/resources/fonts/bootstrap/glyphicons-halflings-regular.eot');src:url('newFonts/resources/fonts/bootstrap/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),url('newFonts/resources/fonts/bootstrap/glyphicons-halflings-regular.woff2') format('woff2'),url('newFonts/resources/fonts/bootstrap/glyphicons-halflings-regular.woff') format('woff'),url('newFonts/resources/fonts/bootstrap/glyphicons-halflings-regular.ttf') format('truetype'),url('newFonts/resources/fonts/bootstrap/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg')}
+.glyphicon{font-family:'Glyphicons Halflings'}
+body{font-weight:300}
+.popover-content p,.guideFieldDescription.short p{font-family:inherit;font-size:1.5rem}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}
+blockquote.quotation_blockquote:before{content:"\E808A";display:inline-block;font-family:"visa-icon";color:#1a1f71;color:var(--vs-primary-dark)}
+blockquote.quotation_blockquote:after{content:"\E808B";display:inline-block;font-family:"visa-icon";color:#1a1f71;color:var(--vs-primary-dark)}
+.dropdown-basic-select,.dropdown-advanced-select{font-family:inherit}
+.dropdown-basic-select-container::after,.dropdown-advanced-select-container::after{font-family:'visa-icon'}
+.link-cta:after{font-family:'visa-icon'}
+.pager li>a span{font-family:"visa-icon"}
+.popover{font-family:inherit}
+.carousel-control .icon-prev,.carousel-control .icon-next{font-family:inherit}
+.quote .quotation-text:after,.quote .quotation-text:before{font-family:"visa-icon"}
+.richtext h1,.exchangeRateText h1,.customrtecls h1{font-size:47px}
+.richtext h2,.exchangeRateText h2,.customrtecls h2{font-size:33px}
+.richtext h3,.exchangeRateText h3,.customrtecls h3{font-size:24px}
+.richtext h4,.exchangeRateText h4,.customrtecls h4{font-size:19px}
+.richtext h5,.richtext h6,.exchangeRateText h5,.exchangeRateText h6,.customrtecls h5,.customrtecls h6{font-size:15px}
+@media(max-width:1200px){.richtext h1,.exchangeRateText h1,.customrtecls h1{font-size:33px}
+.richtext h2,.exchangeRateText h2,.customrtecls h2{font-size:24px}
+.richtext h3,.exchangeRateText h3,.customrtecls h3{font-size:19px}
+.richtext h4,.exchangeRateText h4,.customrtecls h4{font-size:15px}
+}
+.blogs-header-panel h1.blogs-header-heading.visid{font-size:47px;font-weight:300;line-height:59px;text-align:center;margin-top:0;margin-bottom:15px}
+.blogs-header-panel .blogs-header-description.visid>p{color:#2c2c2c;font-size:17px;font-weight:300;line-height:22px;text-align:center}
+.blogs-hero-panel-titlename.visid h2{text-transform:uppercase;color:#2c2c2c;font-size:14px !important;font-weight:700;line-height:19px;margin-top:20px;margin-bottom:0}
+.blogs-hero-panel-subpara.visid p{text-align:left;color:#2c2c2c;font-size:33px;font-weight:700;line-height:42px;margin-top:5px}
+.blogs-hero-panel-subarticle.visid p{font-family:'visa-font-latin-light','visa-font-greek-light','visa-font-cyrillic-light';font-family:var(--font-light);text-align:left;color:#2c2c2c;font-size:17px;font-weight:300;line-height:20px;margin-top:5px}
+.blogs-tiles-panel-titlename.visid h2{text-transform:uppercase;color:#2c2c2c;font-size:12px !important;font-weight:600;line-height:19px;text-align:left;margin-top:20px;margin-bottom:0}
+.blogs-tiles-panel-subpara.visid p{height:150px;color:#2c2c2c;font-size:24px;font-weight:700;line-height:30px;text-align:left;margin-top:10px}
+.blogs-list-panel-titlename.visid h2{text-transform:uppercase;color:#2c2c2c;margin-bottom:0 !important;font-size:12px !important;font-weight:700;line-height:19px;text-align:left;margin-top:16px !important}
+.blogs-list-panel-subpara.visid p{text-align:left;margin-top:30px;color:#2c2c2c;font-size:24px;font-weight:700;line-height:30px}
+.blogs-list-panel-duration.visid span{font-family:'visa-font-latin-light','visa-font-greek-light','visa-font-cyrillic-light';font-family:var(--font-light);float:left;color:#2c2c2c;font-size:14px;font-weight:300;line-height:20px}
+@media(max-width:1200px){.blogs-header-panel h1.blogs-header-heading.visid{font-size:33px}
+.blogs-hero-panel-subpara.visid p{font-size:24px}
+.blogs-list-panel-titlename.visid h2{font-size:12px !important}
+}
+@font-face{font-family:"visaFont";font-display:swap;src:url('newFonts/resources/fonts/visaFont.eot');src:url('newFonts/resources/fonts/visaFont.eot?#iefix') format('eot'),url('newFonts/resources/fonts/visaFont.woff') format('woff'),url('newFonts/resources/fonts/visaFont.ttf') format('truetype'),url('newFonts/resources/fonts/visaFont.svg#visaFont') format('svg');font-weight:normal;font-style:normal}
+.visa-icon{font-family:'visa-icon'}
+.sg-myriad-light{font-family:inherit;font-weight:300}
+.sg-myriad-light-it{font-family:inherit;font-weight:300}
+.sg-myriad-regular{font-family:inherit;font-weight:400}
+.sg-myriad-regular-it{font-family:inherit;font-weight:400}
+.sg-myriad-semibold{font-family:inherit;font-weight:600}
+.sg-myriad-semibold-it{font-family:inherit;font-weight:600}
+.sg-myriad-bold{font-family:inherit;font-weight:700}
+.sg-myriad-bold-it{font-family:inherit;font-weight:700}
+.sg-font-primary{font-family:Helvetica Neue,Helvetica,Arial,sans-serif}
+.sg-font-secondary{font-family:Georgia,Times New Roman,Times,serif}
+@font-face{font-display:swap;font-family:'visa-font-latin-light';src:url('https://cdn.visa.com/v0/assets/fonts/types/dialect/latin/visa_font_light.woff2')}
+@font-face{font-display:swap;font-family:'visa-font-latin-regular';src:url('https://cdn.visa.com/v0/assets/fonts/types/dialect/latin/visa_font_regular.woff2')}
+@font-face{font-display:swap;font-family:'visa-font-latin-semi-bold';src:url('https://cdn.visa.com/v0/assets/fonts/types/dialect/latin/visa_font_semi_bold.woff2')}
+@font-face{font-display:swap;font-family:'visa-font-greek-light';src:url('https://cdn.visa.com/v0/assets/fonts/types/dialect/greek/visa_font_light.woff2')}
+@font-face{font-display:swap;font-family:'visa-font-greek-regular';src:url('https://cdn.visa.com/v0/assets/fonts/types/dialect/greek/visa_font_light.woff2')}
+@font-face{font-display:swap;font-family:'visa-font-greek-semi-bold';src:url('https://cdn.visa.com/v0/assets/fonts/types/dialect/greek/visa_font_semi_bold.woff2')}
+@font-face{font-display:swap;font-family:'visa-font-cyrillic-light';src:url('https://cdn.visa.com/v0/assets/fonts/types/dialect/cyrillic/visa_font_light.woff2')}
+@font-face{font-display:swap;font-family:'visa-font-cyrillic-regular';src:url('https://cdn.visa.com/v0/assets/fonts/types/dialect/cyrillic/visa_font_light.woff2')}
+@font-face{font-display:swap;font-family:'visa-font-cyrillic-semi-bold';src:url('https://cdn.visa.com/v0/assets/fonts/types/dialect/cyrillic/visa_font_semi_bold.woff2')}
